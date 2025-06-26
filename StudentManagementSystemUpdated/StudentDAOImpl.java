@@ -14,7 +14,7 @@ public class StudentDAOImpl implements StudentDAO {
             stmt.setString(3, s.getGrade());
             stmt.setString(4, s.getUsername());
             stmt.executeUpdate();
-            System.out.println("✅ Student added successfully.");
+            System.out.println("Student added successfully.");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -87,8 +87,8 @@ public class StudentDAOImpl implements StudentDAO {
             stmt.setString(5, s.getUsername());
 
             int rows = stmt.executeUpdate();
-            if (rows > 0) System.out.println("✅ Student updated successfully.");
-            else System.out.println("❌ Update failed. Record not found or not yours.");
+            if (rows > 0) System.out.println("Student updated successfully.");
+            else System.out.println("Update failed. Record not found or not yours.");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -105,8 +105,8 @@ public class StudentDAOImpl implements StudentDAO {
             stmt.setString(2, username);
 
             int rows = stmt.executeUpdate();
-            if (rows > 0) System.out.println("✅ Student deleted successfully.");
-            else System.out.println("❌ Delete failed. Record not found or not yours.");
+            if (rows > 0) System.out.println("Student deleted successfully.");
+            else System.out.println("Delete failed. Record not found or not yours.");
 
         } catch (SQLException e) {
             e.printStackTrace();
