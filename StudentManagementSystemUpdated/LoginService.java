@@ -30,7 +30,7 @@ public class LoginService {
             ResultSet rs = checkStmt.executeQuery();
 
             if (rs.next()) {
-                System.out.println("❌ Username already exists.");
+                System.out.println("Username already exists.");
                 return false;
             }
 
@@ -38,7 +38,7 @@ public class LoginService {
                 insertStmt.setString(1, username);
                 insertStmt.setString(2, password);
                 insertStmt.executeUpdate();
-                System.out.println("✅ Registration successful.");
+                System.out.println("Registration successful.");
                 return true;
             }
 
