@@ -21,10 +21,10 @@ public class Main {
             String password = sc.nextLine();
 
             if (!loginService.authenticate(username, password)) {
-                System.out.println("❌ Invalid login. Exiting...");
+                System.out.println("Invalid login. Exiting...");
                 return;
             }
-            System.out.println("✅ Login successful!");
+            System.out.println("Login successful!");
 
         } else if (opt == 2) {
             System.out.print("Choose a username: ");
@@ -33,7 +33,7 @@ public class Main {
             String password = sc.nextLine();
 
             if (!loginService.register(username, password)) {
-                System.out.println("❌ Registration failed.");
+                System.out.println("Registration failed.");
                 return;
             }
 
@@ -43,11 +43,11 @@ public class Main {
             password = sc.nextLine();
 
             if (!loginService.authenticate(username, password)) {
-                System.out.println("❌ Login failed after registration.");
+                System.out.println("Login failed after registration.");
                 return;
             }
         } else {
-            System.out.println("❌ Invalid option.");
+            System.out.println("Invalid option.");
             return;
         }
 
@@ -107,7 +107,7 @@ public class Main {
                     System.out.println("Logged out. Bye " + username + "!");
                     return;
                 }
-                default -> System.out.println("❌ Invalid choice.");
+                default -> System.out.println("Invalid choice.");
             }
         }
     }
